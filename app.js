@@ -1,4 +1,3 @@
-// app.js
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -12,7 +11,7 @@ app.use(bodyParser.json());
 app.use('/api/auth', authRoutes);
 
 app.get('/', (req, res) => {
-    res.sendStatus(200)
+    res.sendStatus(200).send('Server is running Successfully!')
   })
 
 // Database Connection

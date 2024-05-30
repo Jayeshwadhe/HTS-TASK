@@ -1,4 +1,3 @@
-// routes/auth.js
 const express = require('express');
 const bcrypt = require('bcryptjs');
 const User = require('../models/User');
@@ -52,7 +51,7 @@ router.post('/signin', async (req, res) => {
             return res.status(400).json({ msg: 'Invalid credentials' });
         }
 
-        res.status(200).json({ msg: 'Sign-in successful' });
+        res.status(200).json({ msg: 'Sign-in successfully' });
     } catch (err) {
         console.error(err.message);
         res.status(500).send('Server error');
