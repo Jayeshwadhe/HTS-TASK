@@ -8,6 +8,7 @@ const router = express.Router();
 router.get('/',async (req, res)=>{
     res.status(200).send('server working succesfully')
 })
+
 // POST /api/auth/signup
 router.post('/signup', async (req, res) => {
     const { firstName, lastName, email, password } = req.body;

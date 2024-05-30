@@ -11,6 +11,10 @@ app.use(bodyParser.json());
 // Routes
 app.use('/api/auth', authRoutes);
 
+app.get('/', (req, res) => {
+    res.sendStatus(200)
+  })
+
 // Database Connection
 const dbURI = 'mongodb://localhost:27017/auth-api';
 
